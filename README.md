@@ -25,3 +25,6 @@ Cálculo y visualización de los resultados de la consulta de acuerdo a la opcio
 
 > Desarrollado por Jakelin Bedoya www.linkedin.com/in/jakelin-bedoya-becerra
 
+![Badge-Conversor](https://github.com/JakelinB/Conversor_moneda/assets/163566813/fa726bd1-aaf6-4827-b1c9-30a0adf5a8c7)
+
+
