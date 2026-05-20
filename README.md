@@ -1,30 +1,70 @@
-![DinoTrabador](https://github.com/JakelinB/Conversor_moneda/assets/163566813/5607a8aa-12b3-4dfb-947a-a579053372d7)
+# 💱 Conversor de Monedas — Currency Converter
 
-# Conversor_moneda
-Challenge(convertir moneda en base a la consulta de una API)>Programa ONE (Oracle Next Education)>JAVA
-## Descripción
-Conversor de Monedas que permite al usuario ingresar datos por console(valor determinado con el codigo de la moneda y luego el codigo de la moneda a la que lo desea llevar)
+> **ES** | [EN below](#en---currency-converter)
 
-## Desarrollo
-Consulta de la API [https://www.exchangerate-api.com/] para obtener las tasas de cambio entre las diferentes monedas o divisas, hacicendo uso de solicitudes - HTTP para acceder a la API y obtener los datos de conversión.
-Manipulación de los datos JSON convirtiendo el Json a un objeto java, para luego ser llevado a MAP para explorarlo, con el Codigo de moneda como clave.
-Cálculo y visualización de los resultados de la consulta de acuerdo a la opcion de usuario.
+Aplicación de consola en Java que convierte entre divisas en tiempo real consultando la [ExchangeRate API](https://www.exchangerate-api.com/). El usuario ingresa el valor, la moneda origen y la moneda destino, y obtiene el resultado al instante.
 
-## Ejecución
-* Para ejecutar este proyecto debes:
-* Descargar todos los archivos del proyecto
-* Importar el proyecto a tu IDE Java
-* Descargar y habilitar el jar de Gson (https://mvnrepository.com/artifact/com.google.code.gson/gson)
-  
-    + para habilitar el archivo jar de Gson para intellJ: File>Project Structure>Modules>Click en +, como se muestra a continuación:
-    ![Guia para Gson](https://github.com/JakelinB/Conversor_moneda/assets/163566813/93c04cd7-6736-4a5a-a847-88d4430c4501)
-    + Ahora buscas la ubicación de tu archivo Jar y listo!
+Challenge del programa **Oracle Next Education (ONE)** — Alura LATAM.
 
+## ¿Cómo funciona?
 
-* Ejecutar el programa desde la clase Main
+1. El usuario ingresa por consola: monto + código de moneda origen + código de moneda destino
+2. La app realiza una solicitud HTTP a la ExchangeRate API
+3. La respuesta JSON se deserializa con **Gson** y se extrae la tasa de cambio
+4. Se muestra el resultado calculado en consola
 
-> Desarrollado por Jakelin Bedoya www.linkedin.com/in/jakelin-bedoya-becerra
+## Tecnologías
 
-![Badge-Conversor](https://github.com/JakelinB/Conversor_moneda/assets/163566813/fa726bd1-aaf6-4827-b1c9-30a0adf5a8c7)
+| Tecnología | Uso |
+|---|---|
+| Java 17 | Lenguaje principal |
+| HttpClient | Solicitudes HTTP a la API |
+| Gson | Deserialización de JSON |
+| ExchangeRate API | Fuente de tasas de cambio |
 
+## Requisitos
+
+- Java 17+
+- IntelliJ IDEA (recomendado)
+- Archivo JAR de Gson — [descargar aquí](https://mvnrepository.com/artifact/com.google.code.gson/gson)
+
+## Cómo ejecutarlo
+
+```
+1. Clona el repositorio
+2. Abre el proyecto en IntelliJ IDEA
+3. Agrega el JAR de Gson:
+   File > Project Structure > Modules > + > JARs or Directories
+4. Ejecuta la clase Main
+```
+
+## Ejemplo de uso
+
+```
+Ingresa el monto: 100
+Ingresa la moneda origen (ej: USD): USD
+Ingresa la moneda destino (ej: COP): COP
+Resultado: 100 USD = 420,500.00 COP
+```
+
+## Lo que aprendí
+
+- Consumo de APIs REST desde Java puro (sin frameworks)
+- Manejo de respuestas JSON con Gson
+- Flujo completo de una aplicación de consola orientada a objetos
+
+---
+
+## EN — Currency Converter
+
+Java console app that converts between currencies in real time using the ExchangeRate API. Part of the **Oracle Next Education (ONE)** challenge.
+
+### Stack
+`Java 17` · `HttpClient` · `Gson` · `ExchangeRate API`
+
+### Run it
+Open in IntelliJ, add the Gson JAR (`File > Project Structure > Modules > +`), then run the `Main` class.
+
+---
+*Desarrollado por [Jakelin Bedoya](https://www.linkedin.com/in/jakelin-bedoya-becerra) · Oracle ONE Challenge*
 
